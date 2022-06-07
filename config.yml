@@ -1,6 +1,5 @@
 default:
         idcol: "LOG_TIMESTAMP"
-        iddcol: LOG_TIMESTAMP
         predcol: "MODEL_LABEL"
         truthcol: "SNORT_LABEL"
         datacol: "RAW_REQUEST"
