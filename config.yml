@@ -1,0 +1,9 @@
+default:
+        idcol: "LOG_TIMESTAMP"
+        iddcol: LOG_TIMESTAMP
+        predcol: "MODEL_LABEL"
+        truthcol: "SNORT_LABEL"
+        datacol: "RAW_REQUEST"
+        datafields: !expr c('cookie:\ JSESSIONID', 'getAuthType', 'getContentType', 'getContextPath', 'getLocalName', 'getMethod', 'getPathInfo', 'getPathTranslated', 'getProtocol', 'getQueryString', 'getRemoteAddr', 'getRemoteUser', 'getRequestURI', 'getRequestURL', 'getRequestedSessionId', 'getServerName', 'getServletPath', 'header:\ accept', 'header:\ accept-encoding', 'header:\ accept-language', 'header:\ connection', 'header:\ content-length', 'header:\ cookie', 'header:\ dnt', 'header:\ host', 'header:\ referer', 'header:\ upgrade-insecure-requests', 'header:\ user-agent')
+        tablename: "HTTPLOG_REQUEST_LABELED"
+        vertsettings: "driver={/opt/vertica/lib64/libverticaodbc.so};server=localhost;port=5433;database=dbos_provenance;user=dbadmin"
